@@ -15,10 +15,20 @@ public class Categoria {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
-	
+
 	@NotBlank
 	@Size(min = 3, max = 20)
 	private String nome;
+
+	public Categoria() {
+		super();
+	}
+
+	public Categoria(Long codigo, @NotBlank @Size(min = 3, max = 20) String nome) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+	}
 
 	public Long getCodigo() {
 		return codigo;
